@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monopoly Engine UI</title>
+    <link rel="stylesheet" href="/static/style.css?v=1">
+  </head>
+  <body>
+    <main>
+      <section id="start-screen" class="card">
+        <h1>Start Game</h1>
+        <form id="start-form">
+          <div class="form-row">
+            <label>Player 1</label>
+            <input type="text" name="player" required>
+          </div>
+          <div class="form-row">
+            <label>Player 2</label>
+            <input type="text" name="player" required>
+          </div>
+          <div class="form-row">
+            <label>Player 3 (optional)</label>
+            <input type="text" name="player">
+          </div>
+          <div class="form-row">
+            <label>Player 4 (optional)</label>
+            <input type="text" name="player">
+          </div>
+          <button type="submit">Start</button>
+        </form>
+      </section>
+
+      <section id="game-screen" class="hidden">
+        <header>
+          <h1>Monopoly</h1>
+          <div id="turn-indicator"></div>
+        </header>
+
+        <div class="layout">
+          <div id="board" class="board"></div>
+          <aside class="sidebar">
+            <div class="card">
+              <h2>Controls</h2>
+              <div class="controls">
+                <button id="roll-btn">Roll Dice</button>
+                <button id="jail-roll-btn">Jail Roll</button>
+                <button id="jail-pay-btn">Pay $50</button>
+                <button id="buy-btn">Buy Property</button>
+                <button id="decline-btn">Decline</button>
+                <button id="end-turn-btn">End Turn</button>
+              </div>
+              <div class="status" id="status"></div>
+            </div>
+            <div class="card">
+              <h2>Players</h2>
+              <div id="players"></div>
+            </div>
+            <div class="card">
+              <h2>Recent Events</h2>
+              <ul id="event-log"></ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js?v=1"></script>
+  </body>
+</html>

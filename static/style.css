@@ -1,0 +1,157 @@
+:root {
+  --bg: #f4f1e8;
+  --ink: #1b1b1b;
+  --accent: #116466;
+  --card: #ffffff;
+  --muted: #6b6b6b;
+  --border: #d6d0c5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+main {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  margin: 0 0 12px 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.hidden {
+  display: none;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #9bb3b2;
+  cursor: not-allowed;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  aspect-ratio: 1;
+  border: 4px solid var(--ink);
+  background: #fffdfa;
+}
+
+.space {
+  border: 1px solid var(--border);
+  padding: 4px;
+  position: relative;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.space-name {
+  font-weight: 600;
+}
+
+.token-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.token {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.status {
+  color: var(--muted);
+  min-height: 24px;
+}
+
+.player-card {
+  border-bottom: 1px solid var(--border);
+  padding: 8px 0;
+}
+
+.player-card:last-child {
+  border-bottom: none;
+}
+
+#event-log {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
