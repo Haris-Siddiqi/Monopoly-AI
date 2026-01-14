@@ -1,0 +1,15 @@
+Gameplay
+- community chest, chance card mechanics
+- auction mechanic
+- trade mechanic
+- test cases for gameplay and UI
+
+AI agent
+- basic Gameplay
+- advance (trading)
+
+UI
+- board: colored property names, property logo, bar indicating player ownership
+         price on card, property tiles bigger
+- sounds: dice roll, event sound, bad event sound, good event sound
+- design: logo, button design, dice animation, tab title and logo
